@@ -1,0 +1,42 @@
+﻿<form class="form-horizontal" role="form">
+    <h3 class="bg-success" role="alert" id="topMessage">{{message}}</h3>
+    <h3 class="bg-danger" role="alert">{{errorName}}</h3>
+    <div class="col-sm-6 col-lg-12">
+       <div class="form-group">
+            <label class="control-label col-sm-2" for="amount">Amount:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="amount" id="amount" placeholder="Enter Amount">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="Detail">Detail:</label>
+            <div class="col-sm-10">
+                <textarea class="form-control" name="Detail" id="Detail" placeholder="Enter Detail"></textarea>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="CreatedOn">Created On:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="CreatedOn" id="CreatedOn" placeholder="Enter CreatedOn" />
+            
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="Category">Category:</label>
+            <div class="col-sm-10">
+                <select id="Category" name="Category" class="form-control">
+                    <option>1</option>
+                    <option>2</option>
+                </select>
+                </div>
+        </div>
+        <input type="hidden" name="UserID" id="UserID" />
+        <button type="button" class="btn btn-default col-sm-offset-9" data-toggle="modal" data-target="#addCategory">Add Category</button>
+        @Html.Partial("~/Views/Shared/PartialCategory.cshtml")
+
+        <br /><br /><br /><br />
+        <input type="submit" class="btn btn-default" value="Submit" />
+    </div>
+</form>
